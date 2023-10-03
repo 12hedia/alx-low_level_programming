@@ -1,27 +1,26 @@
 #include <stdio.h>
-#include "main.h"
-#include "100-atoi.c"
-
+#include <stdlib.h>
 /**
- * main - multiply two args
- * @argc: argument count
- * @argv: array of potr to char arguments
- * Return: 0 on sucess
+ * main - mul arg
+ * @argc:int
+ * @argv:str
+ * Return:int
  */
-
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int x, i, j;
 
-	if (argc <= 2)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	a = _atoi(argv[1]);
-	b = _atoi(argv[2]);
-
-	printf("%d\n", a * b);
+	else
+	{
+		i = atoi(argv[1]);
+		j = atoi(argv[2]);
+		x = i * j;
+		printf("%d\n", x);
+	}
 	return (0);
 }
